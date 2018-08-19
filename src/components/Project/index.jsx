@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export default class Project extends Component {
   render() {
     return (
-      <Grid.Column width={4}>
+      <Grid.Column width={5}>
         <Link to="/product-hunt">
           <Card>
             <Image src="https://picsum.photos/200?random" />
@@ -24,7 +24,7 @@ export default class Project extends Component {
               </a>
             </Card.Content>
           </Card>
-        </Link>{" "}
+        </Link>
       </Grid.Column>
     );
   }
