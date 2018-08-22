@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import { Card, Grid, Image, Icon, Button, Label } from "semantic-ui-react";
+import store from "../../store";
+import { likeProduct } from "../../actions";
 export default class ProductCard extends Component {
   constructor(props) {
     super(props);
@@ -9,12 +11,12 @@ export default class ProductCard extends Component {
     this.setState({
       likes: this.state.likes + 1
     });
-    this.props.like(this.props.key, this.state.likes);
+    this.props.like(this.props.id, this.state.likes);
+    let id = this.props.id;
+    const act = likeProduct(id);
+    store.dispatch(act);
   };
-  componentWillReceiveProps(someProps) {
-    console.log("this is called");
-    this.setState({ ...this.state, someProps });
-  }
+
   render() {
     return (
       <Grid.Column width={5}>

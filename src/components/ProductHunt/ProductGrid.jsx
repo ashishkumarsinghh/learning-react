@@ -8,7 +8,12 @@ export default class ProductGrid extends Component {
     const projects = [];
     for (const [key, value] of Object.entries(this.props.products))
       projects.push(
-        <ProductCard {...value} key={key} like={this.hlike.bind(this, key)} />
+        <ProductCard
+          {...value}
+          key={key}
+          like={this.hlike.bind(this, key)}
+          id={key}
+        />
       );
 
     this.state = { projects };
