@@ -1,0 +1,8 @@
+.todolist {
+    justify-content: center;
+    line-height: 2em;
+    box-shadow: 3px 3px 5px gray;
+    width: fit-content;
+    padding: 1em 2em;
+    margin: auto;
+}
